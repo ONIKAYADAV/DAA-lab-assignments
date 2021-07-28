@@ -9,36 +9,25 @@ int main()
     int arr[20];
     for(int i=0;i<s;i++)
       cin>>arr[i];
-    int k,c=0,m=0;
+    int k,c=0,m=0,z=0;
     cin>>k;
-    if(k<arr[s/2])
+    for(int i=0,j=s-1;i<=j;)
     {
-      for(int i=0;i<s/2;i++)
+      m=i+(j-i)/2;
+      c++;
+      if(k==arr[m])
       {
-        c++;
-        if(k==arr[i])
-        {
-          m++;
-          cout<<"present "<<c;
-        }
+        z=1;
+        cout<<"present "<<c;
+        break;
       }
-      if(m==0)
-        cout<<"not present "<<c;
+      else if(arr[m]<k)
+        i=m+1;
+      else
+        j=m-1;
     }
-    else if(k>=arr[s/2])
-    {
-      for(int i=s/2;i<s;i++)
-      {
-        c++;
-        if(k==arr[i])
-        {
-          m++;
-          cout<<"present "<<c;
-        }
-      }
-      if(m==0)
-        cout<<"not present "<<c;
-    }
+    if(z==0)
+      cout<<"not present "<<c;
     n--;
     if(n!=0)
       goto A;
