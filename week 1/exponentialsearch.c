@@ -43,5 +43,6 @@ int main()
          printf("%d",c);
     t--;
 }
+
 return 0;
 }
