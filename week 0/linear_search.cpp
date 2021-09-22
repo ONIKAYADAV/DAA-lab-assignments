@@ -36,5 +36,6 @@ int main()
         n--;
     if(n!=0)
         goto A;
+        
     return 0;
 }
