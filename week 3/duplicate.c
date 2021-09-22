@@ -36,4 +36,3 @@ int main()
         duplicate(arr,n);
     }
 }
-© 2021 GitHub, Inc.
